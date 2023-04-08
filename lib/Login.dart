@@ -50,7 +50,7 @@ class _LoginState extends State<Login> {
 
 
           Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(20.0),
           child: TextField(
             controller: _isim,
             decoration: InputDecoration(
@@ -62,7 +62,7 @@ class _LoginState extends State<Login> {
     ),
 
           Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(20.0),
               child: TextField(
                 controller: _soyad,
                 decoration: InputDecoration(
@@ -74,7 +74,7 @@ class _LoginState extends State<Login> {
           ),
 
           Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(20.0),
               child: TextField(
                 controller: _yemek,
                 decoration: InputDecoration(
@@ -94,7 +94,7 @@ class _LoginState extends State<Login> {
 
           ElevatedButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => Bilgi_Sayfasi(isim: _isim.text, soyad: _soyad.text, yemek: _yemek.text)));
-          }, child: Text('Giriş Yap'))
+          }, child: Text('Giriş Yap', style: TextStyle(fontSize: 24),))
 
 
 

@@ -39,7 +39,7 @@ class Bilgi_Sayfasi extends StatelessWidget {
             ElevatedButton(onPressed: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => anaekran()));
           },
-              child: Text('Ana Menü', style: TextStyle(fontSize: 18)))
+              child: Text('Ana Menü', style: TextStyle(fontSize: 20)))
 
 
         ],

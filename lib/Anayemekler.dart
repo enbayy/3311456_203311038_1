@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:izleme/KOFTE_DOSYA/KOFTE.dart';
-import 'package:izleme/KURU_FASULYE_DOSYA/KURU_FASULYE.dart';
-import 'package:izleme/ZULBIYE_DOSYA/ZULBIYE.dart';
-import 'package:izleme/PATLICAN_KEBABI_DOSYA/PATLICAN_KEBABI.dart';
-import 'package:izleme/ISLIM_KEBABI_DOSYA/ISLIM_KEBABI.dart';
-import 'package:izleme/ZEYTINYAGLI_YAPRAK_SARMASI_DOSYA/ZEYTINYAGLI_YAPRAK_SARMASI.dart';
+import 'package:izleme/KOFTE_DOSYA/Kofte.dart';
+import 'package:izleme/KURU_FASULYE_DOSYA/Kuru_Fasulye.dart';
+import 'package:izleme/Zulbiye_Dosya/Zulbiye.dart';
+import 'package:izleme/PATLICAN_KEBABI_DOSYA/Patlican_Kebabi.dart';
+import 'package:izleme/ISLIM_KEBABI_DOSYA/Islim_Kebabi.dart';
+import 'package:izleme/ZEYTINYAGLI_YAPRAK_SARMASI_DOSYA/Zeytinyagli_Yaprak_Sarmasi.dart';
 import 'package:izleme/anaekran.dart';
 
 class Anayemekler extends StatefulWidget {

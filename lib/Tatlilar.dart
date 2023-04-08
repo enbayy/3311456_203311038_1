@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:izleme/AYVA_TATLISI_DOSYA/AYVA_TATLISI.dart';
-import 'package:izleme/BALPARMAK_DOSYA/BALPARMAK.dart';
-import 'package:izleme/DILBER_DUDAGI_DOSYA/DILBER_DUDAGI.dart';
-import 'package:izleme/GULLAC_DOSYA/GULLAC.dart';
-import 'package:izleme/HASHASLI_REVANI_DOSYA/HASHASLI_REVANI.dart';
-import 'package:izleme/KAZANDIBI_DOSYA/KAZANDIBI.dart';
+import 'package:izleme/AYVA_TATLISI_DOSYA/ayva_tatlisi.dart';
+import 'package:izleme/BALPARMAK_DOSYA/balparmak.dart';
+import 'package:izleme/DILBER_DUDAGI_DOSYA/Dilber_Dudagi.dart';
+import 'package:izleme/GULLAC_DOSYA/Gullac.dart';
+import 'package:izleme/HASHASLI_REVANI_DOSYA/Hashasli_Revani.dart';
+import 'package:izleme/KAZANDIBI_DOSYA/Kazandibi.dart';
 import 'package:izleme/anaekran.dart';
 
 class Tatli extends StatefulWidget {
