@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "469642968518",
+    "project_id": "yemektarif-c2a64",
+    "storage_bucket": "yemektarif-c2a64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:469642968518:android:44ecb05b898d58963446c7",
+        "android_client_info": {
+          "package_name": "com.enes_bayar.izleme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "469642968518-7g8vo8d0p1bt3gknbd3sh2n0ggs2747v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBin6ccrtZho-BmLEzMZIZckiQoVHxAuH8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "469642968518-7g8vo8d0p1bt3gknbd3sh2n0ggs2747v.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "469642968518-rq7b92tc00c1bot4nn724uual88e6qfh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.izleme"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

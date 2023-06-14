@@ -1,11 +1,17 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:izleme/Login.dart';
-import 'package:izleme/Popup_menu.dart';
+import 'package:izleme/constant/Custom_divider.dart';
+import 'package:izleme/constant/Popup_menu.dart';
+import 'package:izleme/pages/Login_screens/LoginPage.dart';
+import 'services/auth/firebase_options.dart';
 
-
-
-void main() {
-  runApp(const MyApp());
+void main()async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -16,15 +22,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Leziz Yemek Tarifleri',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        //primarySwatch: Colors.red,
-        visualDensity: VisualDensity.adaptivePlatformDensity
-      ),
       home: Anasayfa(),
     );
   }
 }
-
 
 class Anasayfa extends StatefulWidget {
 
@@ -36,100 +37,69 @@ class _AnasayfaState extends State<Anasayfa> {
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       backgroundColor: Colors.grey,
 
       appBar: AppBar(
-
+        centerTitle: true,
         actions: [Popup_menu()],
         title: Text('Leziz Yemek Tarifleri'),
         elevation: 10,
         backgroundColor: Colors.amber,
         leading: Container(
-    child: Image.asset('assets/resimler/logo.png'),
-      ),
+          child: Image.asset('assets/resimler/logo.png'),
+        ),
       ),
       body: Center(
         child: Column(
 
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children:[
+          children: [
 
+            MyDivider(),
 
-            Divider(
-              thickness:2,
-              height: 30,
-              indent: 20,
-              endIndent: 20,
-              color: Colors.black,
-            ),
+            colorizeAnimation(),
 
+            MyDivider(),
 
-            Text('HOŞGELDİNİZ'
-                ,textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Satisfy',
-                fontSize: 50,
-                fontWeight: FontWeight.bold,
-                //backgroundColor: Colors.red,
-                color: Colors.white)
-            ),
-
-
-            Divider(
-              thickness:2,
-              height: 30,
-              indent: 20,
-              endIndent: 20,
-              color: Colors.black,
-            ),
-
-
-
-
-
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(50.0)
-                  ),
-                  primary: Colors.grey.shade900,
-                  minimumSize: Size(70, 70)),
-              child: Text('GİRİŞ YAP', style: TextStyle(
-                  fontFamily: 'Satisfy',
-                  fontSize: 34)),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
-
+            GestureDetector(
+              child: const Text('GİRİŞ YAP', style: TextStyle(fontSize: 35,color: Colors.white),),
+              onTapUp: (e) {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Giriş Yapınız')));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage()));
               },
             ),
 
-
-            Divider(
-              thickness:2,
-              height: 30,
-              indent: 20,
-              endIndent: 20,
-              color: Colors.black,
-            ),
-
-
-
-
-
-
-
-
-
-
-
-
-
+            MyDivider(),
           ],
         ),
       ),
     );
+  }
+
+  colorizeAnimation() {
+      const colorizeColors = [
+        Colors.white,
+        Colors.grey,
+      ];
+      const colorizeTextStyle = TextStyle(
+          fontSize: 50.0
+      );
+      return SizedBox(
+          height: 100,
+          width: double.infinity,
+          child: Center(
+            child: AnimatedTextKit(
+              animatedTexts: [
+                ColorizeAnimatedText(
+                    'HOŞGELDİNİZ',
+                    textStyle: colorizeTextStyle,
+                    colors: colorizeColors)
+              ],
+              repeatForever: true,
+            ),
+          ),
+        );
   }
 }
 
