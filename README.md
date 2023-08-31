@@ -1,16 +1,6 @@
-# izleme
+Leziz Yemek Tarifleri: 
 
-A new Flutter project.
+![image](https://github.com/enbayy/Leziz_Yemek_Tarifleri/assets/103318928/754f4534-f8e3-444c-a92d-c852853428be)
+![image](https://github.com/enbayy/Leziz_Yemek_Tarifleri/assets/103318928/d1679888-d300-413e-bbe9-5d9e2b921736)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
